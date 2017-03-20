@@ -4,3 +4,5 @@ pytest-watch
 pytest-cov
 coveralls
 coverage
+sphinx
+sphinx-autobuild
