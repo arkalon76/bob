@@ -1,3 +1,6 @@
 pytest
 pytest-testmon
 pytest-watch
+pytest-cov
+coveralls
+coverage

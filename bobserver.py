@@ -49,8 +49,8 @@ if __name__ == "__main__":
     """
     Let's setup the configuration
     """
-    config = loadConfigFile()
-    HOST, PORT = config['server']['host'], config['server']['port']
+    config = BOBServer.load_config_file()
+    HOST, PORT = config['Server']['host'], int(config['Server']['port'])
 
     # Create the server, binding to localhost on port 9999
     with socketserver.TCPServer((HOST, PORT), BOBServer) as server:
