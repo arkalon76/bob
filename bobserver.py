@@ -52,8 +52,9 @@ if __name__ == "__main__":
     config = BOBServer.load_config_file()
     HOST, PORT = config['Server']['host'], int(config['Server']['port'])
 
-    # Create the server, binding to localhost on port 9999
+    # Create the server
     with socketserver.TCPServer((HOST, PORT), BOBServer) as server:
         # Activate the server; this will keep running until you
         # interrupt the program with Ctrl-C
+        print("I'm BOB the server. How may I help you today?")
         server.serve_forever()
