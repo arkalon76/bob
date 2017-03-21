@@ -6,3 +6,6 @@ coveralls
 coverage
 sphinx
 sphinx-autobuild
+mock
+mocker
+pytest-mock
