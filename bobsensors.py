@@ -1,3 +1,7 @@
+class BOBSensors:
+    def get_all_active_sensors():
+        pass
+
 class BOBLightSensor:
 
     def getsensor_value():
@@ -10,5 +14,3 @@ class BOBLightSensor:
             return True
         else:
             return False
-
-    
