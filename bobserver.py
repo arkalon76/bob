@@ -1,4 +1,4 @@
-import socketserver, os
+import socketserver, os, socket
 from configparser import ConfigParser
 
 """
@@ -56,5 +56,9 @@ if __name__ == "__main__":
     with socketserver.TCPServer((HOST, PORT), BOBServer) as server:
         # Activate the server; this will keep running until you
         # interrupt the program with Ctrl-C
+        local_ip = (socket.gethostbyaddr( socket.gethostname() ))[2][0]
+        address = local_ip + ':' + str(PORT)
         print("I'm BOB the server. How may I help you today?")
+        print('')
+        print('Contact me on ' + address)
         server.serve_forever()
